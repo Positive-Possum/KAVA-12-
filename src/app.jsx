@@ -4,33 +4,33 @@ const SCHEDULE = [
   {
     day: "D1", date: "5/27(수)", color: "#4a6fa5", emoji: "🚌",
     items: [
-      { time: "11:30~12:00", name: "오리엔테이션",                place: "2F 메이플홀",                      type: "event"   },
-      { time: "12:00~13:00", name: "점심식사",                    place: "2F 그랑쉐프",                      type: "meal"    },
-      { time: "13:00~15:30", name: "투심보고서 실무(1) — 바이오",  place: "한인수 대표 · 라플라스파트너스",    type: "lecture" },
-      { time: "15:45~18:15", name: "투심보고서 실무(2) — ICT/유통",place: "장원열 이사 · 케이앤티파트너스",   type: "lecture" },
-      { time: "18:30~19:00", name: "객실 키 배부 및 체크인",       place: "",                                type: "alert"   },
-      { time: "19:00~20:00", name: "저녁식사",                    place: "2F 그랑쉐프",                      type: "meal"    },
+      { time: "11:30~12:00", name: "오리엔테이션",                  place: "2F 메이플홀",                      type: "event"   },
+      { time: "12:00~13:00", name: "돼지고기 김치찌개 반상",         place: "2F 그랑쉐프",                      type: "meal"    },
+      { time: "13:00~15:30", name: "투심보고서 실무(1) — 바이오",    place: "한인수 대표 · 라플라스파트너스",    type: "lecture" },
+      { time: "15:45~18:15", name: "투심보고서 실무(2) — ICT/유통", place: "장원열 이사 · 케이앤티파트너스",    type: "lecture" },
+      { time: "18:30~19:00", name: "객실 키 배부 및 체크인",         place: "",                                 type: "alert"   },
+      { time: "19:00~20:00", name: "우니 스테이키 덮밥",             place: "2F 그랑쉐프",                      type: "meal"    },
     ]
   },
   {
     day: "D2", date: "5/28(목)", color: "#8b5cf6", emoji: "📝",
     items: [
-      { time: "07:30~09:00", name: "아침식사",                         place: "2F 그랑쉐프",                       type: "meal"    },
-      { time: "09:00~11:30", name: "투심보고서 실무(3) — 문화콘텐츠",  place: "김범석 부대표 · 스마트스터디벤처스", type: "lecture" },
-      { time: "11:30~12:00", name: "투심보고서 주제 선정",              place: "각 조 팀장",                        type: "event"   },
-      { time: "12:00~13:00", name: "점심식사",                          place: "2F 그랑쉐프",                       type: "meal"    },
-      { time: "13:00~19:00", name: "투심보고서 작성 멘토링",            place: "한인수 · 장원열 · 김범석",          type: "lecture" },
-      { time: "19:00~20:00", name: "저녁식사",                          place: "2F 그랑쉐프",                       type: "meal"    },
-      { time: "20:00~22:00", name: "보고서 작성 과제 자율 팀플",        place: "",                                  type: "event"   },
+      { time: "07:30~09:00", name: "뷔페",                             place: "2F 그랑쉐프",                       type: "meal"    },
+      { time: "09:00~11:30", name: "투심보고서 실무(3) — 문화콘텐츠", place: "김범석 부대표 · 스마트스터디벤처스", type: "lecture" },
+      { time: "11:30~12:00", name: "투심보고서 주제 선정",             place: "각 조 팀장",                        type: "event"   },
+      { time: "12:00~13:00", name: "비빔밥",                           place: "2F 그랑쉐프",                       type: "meal"    },
+      { time: "13:00~19:00", name: "투심보고서 작성 멘토링",           place: "한인수 · 장원열 · 김범석",          type: "lecture" },
+      { time: "19:00~20:00", name: "제육불고기",                       place: "2F 그랑쉐프",                       type: "meal"    },
+      { time: "20:00~22:00", name: "보고서 작성 과제 자율 팀플",       place: "",                                  type: "event"   },
     ]
   },
   {
     day: "D3", date: "5/29(금)", color: "#10b981", emoji: "🏁",
     items: [
-      { time: "07:30~08:30", name: "아침식사",                  place: "2F 그랑쉐프",                  type: "meal"    },
+      { time: "07:30~08:30", name: "뷔페",                      place: "2F 그랑쉐프",                  type: "meal"    },
       { time: "08:30~09:00", name: "객실 키 반납 및 체크아웃",  place: "",                              type: "alert"   },
       { time: "09:00~12:00", name: "투심보고서 발표 및 피드백", place: "한인수 · 장원열 · 김범석",     type: "lecture" },
-      { time: "12:00~13:00", name: "점심식사",                  place: "2F 그랑쉐프",                  type: "meal"    },
+      { time: "12:00~13:00", name: "고등어구이 된장찌개 반상",  place: "2F 그랑쉐프",                  type: "meal"    },
       { time: "13:00",       name: "해산",                      place: "단체버스 14:00 숙소 정문 출발", type: "alert"   },
     ]
   }
@@ -74,21 +74,21 @@ const MEAL_MENU = [
     { label: "저녁", menu: "우니 스테이키 덮밥",     place: "2F 그랑쉐프" },
   ]},
   { day: "D2", date: "5/28(목)", color: "#8b5cf6", meals: [
-    { label: "아침", menu: "조식 뷔페",   place: "2F 그랑쉐프" },
-    { label: "점심", menu: "비빔밥",      place: "2F 그랑쉐프" },
-    { label: "저녁", menu: "제육불고기",  place: "2F 그랑쉐프" },
+    { label: "아침", menu: "뷔페",      place: "2F 그랑쉐프" },
+    { label: "점심", menu: "비빔밥",    place: "2F 그랑쉐프" },
+    { label: "저녁", menu: "제육불고기", place: "2F 그랑쉐프" },
   ]},
   { day: "D3", date: "5/29(금)", color: "#10b981", meals: [
-    { label: "아침", menu: "조식 뷔페",              place: "2F 그랑쉐프" },
+    { label: "아침", menu: "뷔페",                   place: "2F 그랑쉐프" },
     { label: "점심", menu: "고등어구이 된장찌개 반상", place: "2F 그랑쉐프" },
   ]},
 ];
 
 const NOTICES = [
   { icon: "🍽️", text: "식사는 워크숍 참가자 지정구역(2F, 그랑쉐프)에서 해주세요." },
-  { icon: "🪪", text: "교육생 명찰을 식당 및 교육장 내에서 항상 착용해주세요. (미착용 시 외부인으로 구분돼 식사요금 개별 부과될 수 있어요)" },
+  { icon: "🪪",  text: "교육생 명찰 목걸이는 식당 및 교육장 내에서 신분증 역할을 하므로 항상 착용해주세요. (미착용 시 외부인으로 구분되어 식사요금 개별 부과될 수 있어요)" },
   { icon: "🚌", text: "단체버스는 5/29(금) 14:00 숙소 정문 현관에서 출발합니다. 자율 탑승이며 출발 시간 내 미탑승 시 개별 귀가하셔야 합니다." },
-  { icon: "📌", text: "메뉴 및 교육일정·강사는 부분적으로 변경될 수 있습니다." },
+  { icon: "📌", text: "상기 메뉴 및 교육일정·강사는 재료 수급·상황에 따라 변경될 수 있습니다." },
 ];
 
 const TYPE_CONFIG = {
@@ -106,27 +106,82 @@ const TABS = [
   { id: "notice",   label: "📢 공지" },
 ];
 
+// "HH:MM" → 분
+const toMin = (str) => { const [h, m] = str.split(":").map(Number); return h * 60 + m; };
+
+const getCurrentStatus = () => {
+  const now    = new Date();
+  const month  = now.getMonth() + 1;
+  const date   = now.getDate();
+  const curMin = now.getHours() * 60 + now.getMinutes();
+  const dayMap = { "5/27": 0, "5/28": 1, "5/29": 2 };
+  const dayIdx = dayMap[`${month}/${date}`];
+  if (dayIdx === undefined) return { dayIdx: -1, activeIdx: -1, nextIdx: -1 };
+  const items = SCHEDULE[dayIdx].items;
+  for (let i = 0; i < items.length; i++) {
+    const parts = items[i].time.includes("~") ? items[i].time.split("~") : [items[i].time, null];
+    const start = toMin(parts[0]);
+    const end   = parts[1] ? toMin(parts[1]) : start + 60;
+    if (curMin >= start && curMin < end) return { dayIdx, activeIdx: i, nextIdx: -1 };
+  }
+  for (let i = 0; i < items.length; i++) {
+    const start = toMin(items[i].time.split("~")[0]);
+    if (curMin < start) return { dayIdx, activeIdx: -1, nextIdx: i };
+  }
+  return { dayIdx, activeIdx: -1, nextIdx: -1 };
+};
+
 export default function App() {
-  const [tab, setTab]             = useState("schedule");
-  const [activeDay, setActiveDay] = useState(0);
+  const status = getCurrentStatus();
+  const initDay = status.dayIdx >= 0 ? status.dayIdx : 0;
+
+  const [tab, setTab]               = useState("schedule");
+  const [activeDay, setActiveDay]   = useState(initDay);
   const [roomSearch, setRoomSearch] = useState("");
   const [teamSearch, setTeamSearch] = useState("");
 
-  const dayData = SCHEDULE[activeDay];
+  const dayData    = SCHEDULE[activeDay];
+  const isToday    = activeDay === status.dayIdx;
+  const findTeam   = (name) => TEAMS.find(t => t.members.includes(name));
 
-  // 이름으로 팀 찾기
-  const findTeam = (name) => TEAMS.find(t => t.members.includes(name));
+  const nowItem = status.dayIdx >= 0 && status.activeIdx >= 0
+    ? SCHEDULE[status.dayIdx].items[status.activeIdx] : null;
+  const nextItem = status.dayIdx >= 0 && status.nextIdx >= 0
+    ? SCHEDULE[status.dayIdx].items[status.nextIdx] : null;
 
   return (
     <div style={{ fontFamily: "'Noto Sans KR', sans-serif", background: "#080a0f", minHeight: "100vh", color: "#e2e8f0", paddingBottom: 90 }}>
 
       {/* 헤더 */}
       <div style={{ background: "linear-gradient(160deg, #0f1520 0%, #080a0f 100%)", borderBottom: "1px solid #1a2035", padding: "20px 18px 0", position: "sticky", top: 0, zIndex: 100 }}>
-        <div style={{ marginBottom: 14 }}>
-          <div style={{ fontSize: 10, letterSpacing: 4, color: "#4a6fa5", fontWeight: 700, marginBottom: 3 }}>KAVA 12기 · 2025</div>
+        <div style={{ marginBottom: 10 }}>
+          <div style={{ fontSize: 10, letterSpacing: 4, color: "#4a6fa5", fontWeight: 700, marginBottom: 3 }}>KAVA 12기 · 2026</div>
           <div style={{ fontSize: 22, fontWeight: 900, color: "#fff", letterSpacing: -0.5 }}>워크숍 가이드</div>
           <div style={{ fontSize: 11, color: "#3a4a60", marginTop: 3 }}>5/27(수) — 5/29(금) · 2박 3일</div>
         </div>
+
+        {/* 지금 진행 중 배너 */}
+        {nowItem && (
+          <div style={{ background: "#0a2a1a", border: "1px solid #22c55e44", borderRadius: 10, padding: "10px 14px", marginBottom: 10, display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px #22c55e", flexShrink: 0 }} />
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 10, color: "#22c55e", fontWeight: 700, marginBottom: 2 }}>지금 진행 중</div>
+              <div style={{ fontSize: 13, fontWeight: 800, color: "#e2e8f0" }}>{nowItem.name}</div>
+            </div>
+            <div style={{ fontSize: 11, color: "#22c55e", fontWeight: 700, whiteSpace: "nowrap" }}>{nowItem.time}</div>
+          </div>
+        )}
+        {!nowItem && nextItem && (
+          <div style={{ background: "#0d1a2a", border: "1px solid #4a6fa544", borderRadius: 10, padding: "10px 14px", marginBottom: 10, display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#4a6fa5", flexShrink: 0 }} />
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 10, color: "#4a6fa5", fontWeight: 700, marginBottom: 2 }}>다음 일정</div>
+              <div style={{ fontSize: 13, fontWeight: 800, color: "#e2e8f0" }}>{nextItem.name}</div>
+            </div>
+            <div style={{ fontSize: 11, color: "#4a6fa5", fontWeight: 700, whiteSpace: "nowrap" }}>{nextItem.time}</div>
+          </div>
+        )}
+
         {/* 탭 */}
         <div style={{ display: "flex", overflowX: "auto", gap: 0 }}>
           {TABS.map(t => (
@@ -163,14 +218,34 @@ export default function App() {
             <div style={{ position: "absolute", left: 20, top: 12, bottom: 12, width: 2, background: `linear-gradient(to bottom, ${dayData.color}44, transparent)`, borderRadius: 2 }} />
             {dayData.items.map((item, i) => {
               const tc = TYPE_CONFIG[item.type];
+              const isActive = isToday && i === status.activeIdx;
+              const isNext   = isToday && i === status.nextIdx;
               return (
                 <div key={i} style={{ display: "flex", gap: 14, marginBottom: 12, position: "relative" }}>
                   <div style={{ width: 42, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 14 }}>
-                    <div style={{ width: 10, height: 10, borderRadius: "50%", background: tc.dot, border: `2px solid ${tc.dot}44`, zIndex: 1 }} />
+                    <div style={{
+                      width: isActive ? 14 : 10, height: isActive ? 14 : 10,
+                      borderRadius: "50%", background: tc.dot,
+                      border: `2px solid ${tc.dot}44`, zIndex: 1,
+                      boxShadow: isActive ? `0 0 8px ${tc.dot}` : "none",
+                      transition: "all 0.3s"
+                    }} />
                   </div>
-                  <div style={{ flex: 1, background: tc.bg, border: `1px solid ${tc.border}33`, borderLeft: `3px solid ${tc.dot}`, borderRadius: "0 12px 12px 0", padding: "12px 14px" }}>
+                  <div style={{
+                    flex: 1,
+                    background: isActive ? tc.bg.replace("0d", "18") : tc.bg,
+                    border: isActive ? `1.5px solid ${tc.dot}88` : `1px solid ${tc.border}33`,
+                    borderLeft: `3px solid ${isActive ? tc.dot : isNext ? tc.dot + "88" : tc.dot + "44"}`,
+                    borderRadius: "0 12px 12px 0", padding: "12px 14px",
+                    opacity: !isToday ? 1 : (i < status.activeIdx ? 0.45 : 1),
+                    transition: "all 0.3s"
+                  }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8 }}>
-                      <div style={{ fontSize: 14, fontWeight: 800, color: "#e2e8f0", lineHeight: 1.4 }}>{tc.icon} {item.name}</div>
+                      <div style={{ fontSize: 14, fontWeight: 800, color: isActive ? "#fff" : "#e2e8f0", lineHeight: 1.4 }}>
+                        {tc.icon} {item.name}
+                        {isActive && <span style={{ marginLeft: 6, fontSize: 10, color: "#22c55e", fontWeight: 700, background: "#22c55e18", padding: "2px 6px", borderRadius: 8 }}>진행 중</span>}
+                        {isNext   && <span style={{ marginLeft: 6, fontSize: 10, color: "#4a6fa5", fontWeight: 700, background: "#4a6fa518", padding: "2px 6px", borderRadius: 8 }}>다음</span>}
+                      </div>
                       <div style={{ fontSize: 11, color: tc.dot, fontWeight: 700, whiteSpace: "nowrap", flexShrink: 0, background: tc.dot + "15", padding: "3px 8px", borderRadius: 20 }}>{item.time}</div>
                     </div>
                     {item.place && <div style={{ fontSize: 11, color: "#3a4a60", marginTop: 6 }}>📍 {item.place}</div>}
@@ -192,7 +267,7 @@ export default function App() {
               .filter(r => !roomSearch || r.room.includes(roomSearch) || r.members.some(m => m.includes(roomSearch)))
               .map((r, i) => {
                 const team1 = findTeam(r.members[0]);
-                const team2 = findTeam(r.members[1]);
+                const team2 = r.members[1] ? findTeam(r.members[1]) : null;
                 return (
                   <div key={i} style={{ background: "#0d1520", border: "1px solid #1a2035", borderRadius: 12, padding: "14px 14px" }}>
                     <div style={{ fontSize: 12, color: "#4a6fa5", fontWeight: 800, marginBottom: 10 }}>🛏 {r.room}</div>
