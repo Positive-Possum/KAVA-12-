@@ -98,12 +98,37 @@ const TYPE_CONFIG = {
   alert:   { bg: "#1f0d0d", border: "#ef4444", dot: "#ef4444", icon: "⚠️" },
 };
 
+const FACILITIES = [
+  { name: "사우나",       loc: "콘도 1F",               hours: "일~목 6:00–20:00 / 금·토 6:00–21:00", tel: "033-260-2665", note: "영업종료 1시간 전 입장 마감", icon: "♨️",  cat: "wellness" },
+  { name: "휘트니스 센터", loc: "콘도 1F",              hours: "일~목 6:00–20:00 / 금·토 6:00–21:00", tel: "033-260-2665", note: "영업종료 1시간 전 입장 마감", icon: "💪",  cat: "wellness" },
+  { name: "힐링라운지",   loc: "콘도 1F",               hours: "24시",                                 tel: "033-260-2660", note: "",                           icon: "🛋️", cat: "wellness" },
+  { name: "그랑쉐프",     loc: "콘도 2F 레스토랑",      hours: "업장 문의",                            tel: "033-260-2760", note: "Break Time 15:00–17:30",     icon: "🍽️", cat: "food"    },
+  { name: "그랑그릴",     loc: "콘도 2F",               hours: "업장 문의",                            tel: "033-260-2764", note: "닭갈비·구이 전문점",         icon: "🔥",  cat: "food"    },
+  { name: "아라비스타",   loc: "콘도 1F CAFE",          hours: "업장 문의",                            tel: "033-260-2763", note: "브런치 8:30–11:00",          icon: "☕",  cat: "food"    },
+  { name: "GS25 편의점",  loc: "콘도 1F",               hours: "24시",                                 tel: "033-260-3446", note: "",                           icon: "🏪",  cat: "shop"    },
+  { name: "인생네컷",     loc: "콘도 1F",               hours: "24시",                                 tel: "033-260-2660", note: "",                           icon: "📸",  cat: "shop"    },
+  { name: "게임존",       loc: "콘도 1F",               hours: "일~목 9:00–21:00 / 금·토 9:00–21:30", tel: "033-260-2665", note: "",                           icon: "🎮",  cat: "leisure" },
+  { name: "야외수영장",   loc: "콘도 1F",               hours: "하계 시즌 운영",                       tel: "033-260-2857", note: "업장 문의",                  icon: "🏊",  cat: "leisure" },
+  { name: "골프 연습장",  loc: "리조트 입구–콘도 사이", hours: "업장 문의",                            tel: "033-260-2992", note: "32타석 · 비거리 168m",       icon: "⛳",  cat: "leisure" },
+  { name: "키즈파크",     loc: "콘도 B1F",              hours: "10:00–20:00",                          tel: "033-260-2789", note: "프런트 출입키 발급 · 월요일 휴장", icon: "🎠", cat: "leisure" },
+  { name: "양상블",       loc: "콘도 1F",               hours: "업장 문의",                            tel: "033-260-2789", note: "",                           icon: "🎵",  cat: "leisure" },
+];
+
+const FAC_CATS = [
+  { id: "all",      label: "전체"   },
+  { id: "wellness", label: "웰니스" },
+  { id: "food",     label: "식음"   },
+  { id: "shop",     label: "쇼핑"   },
+  { id: "leisure",  label: "레저"   },
+];
+
 const TABS = [
-  { id: "schedule", label: "📅 일정" },
-  { id: "room",     label: "🛏 객실" },
-  { id: "team",     label: "👥 팀"   },
-  { id: "menu",     label: "🍽️ 식사" },
-  { id: "notice",   label: "📢 공지" },
+  { id: "schedule",  label: "📅 일정" },
+  { id: "room",      label: "🛏 객실" },
+  { id: "team",      label: "👥 팀"   },
+  { id: "menu",      label: "🍽️ 식사" },
+  { id: "facility",  label: "🏨 시설" },
+  { id: "notice",    label: "📢 공지" },
 ];
 
 // "HH:MM" → 분
@@ -139,6 +164,7 @@ export default function App() {
   const [activeDay, setActiveDay]   = useState(initDay);
   const [roomSearch, setRoomSearch] = useState("");
   const [teamSearch, setTeamSearch] = useState("");
+  const [facCat, setFacCat] = useState("all");
 
   const dayData    = SCHEDULE[activeDay];
   const isToday    = activeDay === status.dayIdx;
@@ -335,6 +361,34 @@ export default function App() {
                   <div style={{ fontSize: 11, color: "#22c55e", background: "#0a1f0a", padding: "4px 10px", borderRadius: 20 }}>{meal.place}</div>
                 </div>
               ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* ── 시설 탭 ── */}
+      {tab === "facility" && (
+        <div style={{ padding: "16px 18px 0" }}>
+          <div style={{ display: "flex", gap: 6, overflowX: "auto", marginBottom: 16, paddingBottom: 2 }}>
+            {FAC_CATS.map(c => (
+              <button key={c.id} onClick={() => setFacCat(c.id)} style={{
+                flexShrink: 0, padding: "6px 14px", borderRadius: 20,
+                background: facCat === c.id ? "#4a6fa5" : "#0f1220",
+                color: facCat === c.id ? "#fff" : "#3a4a60",
+                border: facCat === c.id ? "1px solid #4a6fa5" : "1px solid #1a2035",
+                fontSize: 12, fontWeight: 700, cursor: "pointer"
+              }}>{c.label}</button>
+            ))}
+          </div>
+          {FACILITIES.filter(f => facCat === "all" || f.cat === facCat).map((f, i) => (
+            <div key={i} style={{ background: "#0d1520", border: "1px solid #1a2035", borderRadius: 12, padding: "14px 16px", marginBottom: 8 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+                <div style={{ fontSize: 15, fontWeight: 800, color: "#e2e8f0" }}>{f.icon} {f.name}</div>
+                <div style={{ fontSize: 11, color: "#4a6fa5", background: "#0d1a2a", padding: "3px 10px", borderRadius: 20, fontWeight: 700, whiteSpace: "nowrap" }}>{f.loc}</div>
+              </div>
+              <div style={{ fontSize: 12, color: "#6b7a99", marginBottom: f.note ? 4 : 0 }}>🕐 {f.hours}</div>
+              {f.note && <div style={{ fontSize: 11, color: "#f59e0b", marginBottom: 4 }}>※ {f.note}</div>}
+              <div style={{ fontSize: 11, color: "#3a4560" }}>📞 {f.tel}</div>
             </div>
           ))}
         </div>
