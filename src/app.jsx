@@ -50,7 +50,7 @@ const ROOMS = [
   { room: "316호", members: ["강병진", "백범진"] },
   { room: "317호", members: ["손혁준", "윤강연"] },
   { room: "318호", members: ["신종목", "김한빈"] },
-  { room: "319호", members: ["신찬울", "유일용"] },
+  { room: "319호", members: ["신찬울", "유일웅"] },
   { room: "412호", members: ["이후영", "장성준"] },
   { room: "414호", members: ["김윤지", "김효지"] },
   { room: "415호", members: ["성효은", "김신아"] },
@@ -65,7 +65,7 @@ const TEAMS = [
   { team: "3팀", count: 7, color: "#10b981", members: ["구자경", "김영헌", "서소현", "신지환", "안희선", "이기원", "임영상"] },
   { team: "4팀", count: 7, color: "#f59e0b", members: ["강병진", "김누리", "김신아", "김지민", "이규훈", "이원종", "이준명"] },
   { team: "5팀", count: 6, color: "#ef4444", members: ["노유미", "백범진", "손혁준", "신종목", "윤강연", "정서안"] },
-  { team: "6팀", count: 6, color: "#06b6d4", members: ["김한빈", "신찬울", "유일용", "이후영", "장성준", "정예람"] },
+  { team: "6팀", count: 6, color: "#06b6d4", members: ["김한빈", "신찬울", "유일웅", "이후영", "장성준", "정예람"] },
 ];
 
 const MEAL_MENU = [
