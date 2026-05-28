@@ -29,9 +29,9 @@ const SCHEDULE = [
     items: [
       { time: "07:30~08:30", name: "뷔페",                      place: "2F 그랑쉐프",                  type: "meal"    },
       { time: "08:30~09:00", name: "객실 키 반납 및 체크아웃",  place: "",                              type: "alert"   },
-      { time: "09:00~12:00", name: "투심보고서 발표 및 피드백", place: "한인수 · 장원열 · 김범석",     type: "lecture" },
-      { time: "12:00~13:00", name: "고등어구이 된장찌개 반상",  place: "2F 그랑쉐프",                  type: "meal"    },
-      { time: "13:00",       name: "해산",                      place: "단체버스 14:00 숙소 정문 출발", type: "alert"   },
+      { time: "09:00~12:30", name: "투심보고서 발표 및 피드백", place: "한인수 · 장원열 · 김범석",     type: "lecture" },
+      { time: "12:30~13:30", name: "고등어구이 된장찌개 반상",  place: "2F 그랑쉐프",                  type: "meal"    },
+      { time: "14:00",       name: "해산",                      place: "단체버스 14:00 숙소 정문 출발", type: "alert"   },
     ]
   }
 ];
